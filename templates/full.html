@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}"> <!-- Include your CSS file here -->
+</head>
+<body>
+    <header>
+        <h1>My Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="display: contents;">
+        <section class="blog-posts">
+            <article>
+                <h2>{{more1.title}}</h2>
+                <p>{{more1.description}}</p>
+                <h4>{{more1.created_at}}</h4>
+                <a href="{% url 'home' %}">Read less</a>
+            </article>
+            <!-- More articles go here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Blog</p>
+    </footer>
+</body>
+</html>
